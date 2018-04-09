@@ -1,0 +1,10 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+cookies.json
+venv
+local
+
+# complied proto files
+src/example.rs
+src/hangouts.rs

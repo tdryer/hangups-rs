@@ -1,0 +1,2492 @@
+syntax = "proto2";
+enum ActiveClientState {
+  ACTIVE_CLIENT_STATE_NO_ACTIVE = 0;
+  ACTIVE_CLIENT_STATE_IS_ACTIVE = 1;
+  ACTIVE_CLIENT_STATE_OTHER_ACTIVE = 2;
+}
+enum BlockState {
+  BLOCK_STATE_UNKNOWN = 0;
+  BLOCK_STATE_BLOCK = 1;
+  BLOCK_STATE_UNBLOCK = 2;
+}
+enum CallerIdSettingsMask {
+  CALLER_ID_SETTINGS_MASK_UNKNOWN = 0;
+  CALLER_ID_SETTINGS_MASK_PROVIDED = 1;
+}
+enum ClientBuildType {
+  BUILD_TYPE_UNKNOWN = 0;
+  BUILD_TYPE_PRODUCTION_WEB = 1;
+  BUILD_TYPE_PRODUCTION_APP = 3;
+}
+enum ClientId {
+  CLIENT_ID_UNKNOWN = 0;
+  CLIENT_ID_ANDROID = 1;
+  CLIENT_ID_IOS = 2;
+  CLIENT_ID_CHROME = 3;
+  CLIENT_ID_WEB_GPLUS = 5;
+  CLIENT_ID_WEB_GMAIL = 6;
+  CLIENT_ID_ULTRAVIOLET = 13;
+  CLIENT_ID_WEB_HANGOUTS = 44;
+}
+enum ClientPresenceStateType {
+  CLIENT_PRESENCE_STATE_UNKNOWN = 0;
+  CLIENT_PRESENCE_STATE_NONE = 1;
+  CLIENT_PRESENCE_STATE_DESKTOP_IDLE = 30;
+  CLIENT_PRESENCE_STATE_DESKTOP_ACTIVE = 40;
+}
+enum ConfigurationBitType {
+  CONFIGURATION_BIT_TYPE_UNKNOWN = 0;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_1 = 1;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_2 = 2;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_3 = 3;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_4 = 4;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_5 = 5;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_6 = 6;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_7 = 7;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_8 = 8;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_9 = 9;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_10 = 10;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_11 = 11;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_12 = 12;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_13 = 13;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_14 = 14;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_15 = 15;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_16 = 16;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_17 = 17;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_18 = 18;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_19 = 19;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_20 = 20;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_21 = 21;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_22 = 22;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_23 = 23;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_24 = 24;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_25 = 25;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_26 = 26;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_27 = 27;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_28 = 28;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_29 = 29;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_30 = 30;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_31 = 31;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_32 = 32;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_33 = 33;
+  CONFIGURATION_BIT_TYPE_DESKTOP_AUTO_EMOJI_CONVERSION_ENABLED = 34;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_35 = 35;
+  CONFIGURATION_BIT_TYPE_UNKNOWN_36 = 36;
+  CONFIGURATION_BIT_TYPE_DESKTOP_COMPACT_MODE_ENABLED = 38;
+}
+enum ConversationStatus {
+  CONVERSATION_STATUS_UNKNOWN = 0;
+  CONVERSATION_STATUS_INVITED = 1;
+  CONVERSATION_STATUS_ACTIVE = 2;
+  CONVERSATION_STATUS_LEFT = 3;
+}
+enum ConversationType {
+  CONVERSATION_TYPE_UNKNOWN = 0;
+  CONVERSATION_TYPE_ONE_TO_ONE = 1;
+  CONVERSATION_TYPE_GROUP = 2;
+}
+enum ConversationView {
+  CONVERSATION_VIEW_UNKNOWN = 0;
+  CONVERSATION_VIEW_INBOX = 1;
+  CONVERSATION_VIEW_ARCHIVED = 2;
+}
+enum DeleteType {
+  DELETE_TYPE_UNKNOWN = 0;
+  DELETE_TYPE_UPPER_BOUND = 1;
+}
+enum DeliveryMediumType {
+  DELIVERY_MEDIUM_UNKNOWN = 0;
+  DELIVERY_MEDIUM_BABEL = 1;
+  DELIVERY_MEDIUM_GOOGLE_VOICE = 2;
+  DELIVERY_MEDIUM_LOCAL_SMS = 3;
+}
+enum EventType {
+  EVENT_TYPE_UNKNOWN = 0;
+  EVENT_TYPE_REGULAR_CHAT_MESSAGE = 1;
+  EVENT_TYPE_SMS = 2;
+  EVENT_TYPE_VOICEMAIL = 3;
+  EVENT_TYPE_ADD_USER = 4;
+  EVENT_TYPE_REMOVE_USER = 5;
+  EVENT_TYPE_CONVERSATION_RENAME = 6;
+  EVENT_TYPE_HANGOUT = 7;
+  EVENT_TYPE_PHONE_CALL = 8;
+  EVENT_TYPE_OTR_MODIFICATION = 9;
+  EVENT_TYPE_PLAN_MUTATION = 10;
+  EVENT_TYPE_MMS = 11;
+  EVENT_TYPE_DEPRECATED_12 = 12;
+  EVENT_TYPE_OBSERVED_EVENT = 13;
+  EVENT_TYPE_GROUP_LINK_SHARING_MODIFICATION = 14;
+}
+enum FieldMask {
+  FIELD_MASK_REACHABLE = 1;
+  FIELD_MASK_AVAILABLE = 2;
+  FIELD_MASK_MOOD = 3;
+  FIELD_MASK_IN_CALL = 6;
+  FIELD_MASK_DEVICE = 7;
+  FIELD_MASK_LAST_SEEN = 10;
+}
+enum FocusDevice {
+  FOCUS_DEVICE_UNSPECIFIED = 0;
+  FOCUS_DEVICE_DESKTOP = 20;
+  FOCUS_DEVICE_MOBILE = 300;
+}
+enum FocusType {
+  FOCUS_TYPE_UNKNOWN = 0;
+  FOCUS_TYPE_FOCUSED = 1;
+  FOCUS_TYPE_UNFOCUSED = 2;
+}
+enum ForceHistory {
+  FORCE_HISTORY_UNKNOWN = 0;
+  FORCE_HISTORY_NO = 1;
+}
+enum Gender {
+  GENDER_UNKNOWN = 0;
+  GENDER_MALE = 1;
+  GENDER_FEMALE = 2;
+}
+enum GroupLinkSharingStatus {
+  GROUP_LINK_SHARING_STATUS_UNKNOWN = 0;
+  GROUP_LINK_SHARING_STATUS_ON = 1;
+  GROUP_LINK_SHARING_STATUS_OFF = 2;
+}
+enum HangoutEventType {
+  HANGOUT_EVENT_TYPE_UNKNOWN = 0;
+  HANGOUT_EVENT_TYPE_START = 1;
+  HANGOUT_EVENT_TYPE_END = 2;
+  HANGOUT_EVENT_TYPE_JOIN = 3;
+  HANGOUT_EVENT_TYPE_LEAVE = 4;
+  HANGOUT_EVENT_TYPE_COMING_SOON = 5;
+  HANGOUT_EVENT_TYPE_ONGOING = 6;
+}
+enum InvitationAffinity {
+  INVITE_AFFINITY_UNKNOWN = 0;
+  INVITE_AFFINITY_HIGH = 1;
+  INVITE_AFFINITY_LOW = 2;
+}
+enum InvitationStatus {
+  INVITATION_STATUS_UNKNOWN = 0;
+  INVITATION_STATUS_PENDING = 1;
+  INVITATION_STATUS_ACCEPTED = 2;
+}
+enum ItemType {
+  ITEM_TYPE_THING = 0;
+  ITEM_TYPE_PLUS_PHOTO = 249;
+  ITEM_TYPE_PLACE = 335;
+  ITEM_TYPE_PLACE_V2 = 340;
+}
+enum MediaType {
+  MEDIA_TYPE_UNKNOWN = 0;
+  MEDIA_TYPE_PHOTO = 1;
+  MEDIA_TYPE_ANIMATED_PHOTO = 4;
+}
+enum MembershipChangeType {
+  MEMBERSHIP_CHANGE_TYPE_JOIN = 1;
+  MEMBERSHIP_CHANGE_TYPE_LEAVE = 2;
+}
+enum NetworkType {
+  NETWORK_TYPE_UNKNOWN = 0;
+  NETWORK_TYPE_BABEL = 1;
+  NETWORK_TYPE_GOOGLE_VOICE = 2;
+}
+enum NotificationLevel {
+  NOTIFICATION_LEVEL_UNKNOWN = 0;
+  NOTIFICATION_LEVEL_QUIET = 10;
+  NOTIFICATION_LEVEL_RING = 30;
+}
+enum OffTheRecordStatus {
+  OFF_THE_RECORD_STATUS_UNKNOWN = 0;
+  OFF_THE_RECORD_STATUS_OFF_THE_RECORD = 1;
+  OFF_THE_RECORD_STATUS_ON_THE_RECORD = 2;
+}
+enum OffTheRecordToggle {
+  OFF_THE_RECORD_TOGGLE_UNKNOWN = 0;
+  OFF_THE_RECORD_TOGGLE_ENABLED = 1;
+  OFF_THE_RECORD_TOGGLE_DISABLED = 2;
+}
+enum OffnetworkAddressType {
+  OFFNETWORK_ADDRESS_TYPE_UNKNOWN = 0;
+  OFFNETWORK_ADDRESS_TYPE_EMAIL = 1;
+}
+enum ParticipantType {
+  PARTICIPANT_TYPE_UNKNOWN = 0;
+  PARTICIPANT_TYPE_GAIA = 2;
+  PARTICIPANT_TYPE_GOOGLE_VOICE = 3;
+}
+enum PastHangoutState {
+  PAST_HANGOUT_STATE_UNKNOWN = 0;
+  PAST_HANGOUT_STATE_HAD_PAST_HANGOUT = 1;
+  PAST_HANGOUT_STATE_NO_PAST_HANGOUT = 2;
+}
+enum PhoneDiscoverabilityStatus {
+  PHONE_DISCOVERABILITY_STATUS_UNKNOWN = 0;
+  PHONE_DISCOVERABILITY_STATUS_OPTED_IN_BUT_NOT_DISCOVERABLE = 2;
+}
+enum PhoneValidationResult {
+  PHONE_VALIDATION_RESULT_IS_POSSIBLE = 0;
+}
+enum PhoneVerificationStatus {
+  PHONE_VERIFICATION_STATUS_UNKNOWN = 0;
+  PHONE_VERIFICATION_STATUS_VERIFIED = 1;
+}
+enum PhotoUrlStatus {
+  PHOTO_URL_STATUS_UNKNOWN = 0;
+  PHOTO_URL_STATUS_PLACEHOLDER = 1;
+  PHOTO_URL_STATUS_USER_PHOTO = 2;
+}
+enum ProfileType {
+  PROFILE_TYPE_NONE = 0;
+  PROFILE_TYPE_ES_USER = 1;
+}
+enum ReplyToInviteType {
+  REPLY_TO_INVITE_TYPE_UNKNOWN = 0;
+  REPLY_TO_INVITE_TYPE_ACCEPT = 1;
+  REPLY_TO_INVITE_TYPE_DECLINE = 2;
+}
+enum ResponseStatus {
+  RESPONSE_STATUS_UNKNOWN = 0;
+  RESPONSE_STATUS_OK = 1;
+  RESPONSE_STATUS_UNEXPECTED_ERROR = 3;
+  RESPONSE_STATUS_INVALID_REQUEST = 4;
+}
+enum RichPresenceType {
+  RICH_PRESENCE_TYPE_UNKNOWN = 0;
+  RICH_PRESENCE_TYPE_IN_CALL_STATE = 1;
+  RICH_PRESENCE_TYPE_DEVICE = 2;
+  RICH_PRESENCE_TYPE_UNKNOWN_3 = 3;
+  RICH_PRESENCE_TYPE_UNKNOWN_4 = 4;
+  RICH_PRESENCE_TYPE_UNKNOWN_5 = 5;
+  RICH_PRESENCE_TYPE_LAST_SEEN = 6;
+}
+enum SegmentType {
+  SEGMENT_TYPE_TEXT = 0;
+  SEGMENT_TYPE_LINE_BREAK = 1;
+  SEGMENT_TYPE_LINK = 2;
+}
+enum SoundState {
+  SOUND_STATE_UNKNOWN = 0;
+  SOUND_STATE_ON = 1;
+  SOUND_STATE_OFF = 2;
+}
+enum SourceType {
+  SOURCE_TYPE_UNKNOWN = 0;
+}
+enum SyncFilter {
+  SYNC_FILTER_UNKNOWN = 0;
+  SYNC_FILTER_INBOX = 1;
+  SYNC_FILTER_ARCHIVED = 2;
+}
+enum TypingType {
+  TYPING_TYPE_UNKNOWN = 0;
+  TYPING_TYPE_STARTED = 1;
+  TYPING_TYPE_PAUSED = 2;
+  TYPING_TYPE_STOPPED = 3;
+}
+message MarkEventObservedRequest {
+  optional RequestHeader request_header = 1;
+  repeated Xmpu unknown_2 = 2;
+}
+message GetEntityByIdRequest {
+  optional RequestHeader request_header = 1;
+  optional EntityLookupSpec unknown_2 = 2;
+  repeated EntityLookupSpec batch_lookup_spec = 3;
+  repeated uint32 unknown_4 = 4;
+}
+// Possible enums names: ['ClientAddUserError']
+// Possible enum fields: ['d']
+message AddUserResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Xmph unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+  optional string unknown_4 = 4;
+  optional Event created_event = 5;
+  optional Conversation unknown_6 = 6;
+  optional uint32 unknown_8 = 8;
+}
+// Possible enum fields: ['a']
+message DeleteConversationRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional uint64 delete_upper_bound_timestamp = 3;
+  optional uint32 unknown_4 = 4;
+  repeated string unknown_5 = 5;
+}
+message GetFavoritesRequest {
+  optional RequestHeader request_header = 1;
+}
+message SetInviteSettingsRequest {
+  optional RequestHeader request_header = 1;
+  optional Xmpd unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+message SetConversationNotificationLevelResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 timestamp = 2;
+}
+// Possible enum fields: ['b', 'c']
+message SetConversationNotificationLevelRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional NotificationLevel level = 3;
+  optional uint32 unknown_4 = 4;
+}
+message EasterEggRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional EasterEgg easter_egg = 3;
+}
+message RenameConversationResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional Event created_event = 4;
+  optional Conversation unknown_5 = 5;
+}
+message DeclineAllInvitesResponse {
+  optional ResponseHeader response_header = 1;
+}
+// Possible enum fields: ['b', 'c', 'e']
+message SyncRecentConversationsRequest {
+  optional RequestHeader request_header = 1;
+  optional uint64 last_event_timestamp = 2;
+  optional uint32 max_conversations = 3;
+  optional uint32 max_events_per_conversation = 4;
+  repeated SyncFilter sync_filter = 5;
+  optional uint32 unknown_6 = 6;
+  optional bool unknown_7 = 7;
+  repeated uint32 unknown_8 = 8;
+}
+// Possible enums names: ['ClientRequestedFieldMask']
+message GetSelfInfoRequest {
+  optional RequestHeader request_header = 1;
+  repeated uint32 unknown_2 = 2;
+  repeated uint32 unknown_3 = 3;
+  optional bool unknown_4 = 4;
+}
+message RemoveUserRequest {
+  optional RequestHeader request_header = 1;
+  optional bytes unknown_2 = 2;
+  optional ParticipantId participant_id = 3;
+  optional uint64 unknown_4 = 4;
+  optional EventRequestHeader event_request_header = 5;
+}
+// Possible enum fields: ['a', 'f']
+message RegisterDeviceResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint32 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_5 = 5;
+  optional uint32 unknown_6 = 6;
+  optional string unknown_7 = 7;
+  optional string unknown_8 = 8;
+}
+// Possible enum fields: ['f', 'g']
+message GetConversationRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationSpec conversation_spec = 2;
+  optional bool include_conversation_metadata = 3;
+  optional bool include_event = 4;
+  optional uint32 max_events_per_conversation = 6;
+  optional EventContinuationToken event_continuation_token = 7;
+  optional bool unknown_8 = 8;
+  optional uint32 unknown_9 = 9;
+  optional EventContinuationToken unknown_11 = 11;
+}
+// Possible enum fields: ['b']
+message GetInviteSettingsResponse {
+  optional ResponseHeader response_header = 1;
+  optional Xmpd unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+message DismissSuggestedContactsRequest {
+  optional RequestHeader request_header = 1;
+  repeated ParticipantId unknown_2 = 2;
+}
+message MarkEventObservedResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Xmql unknown_2 = 2;
+}
+// Possible enum fields: ['b']
+message ModifyOTRStatusRequest {
+  optional RequestHeader request_header = 1;
+  optional bytes unknown_2 = 2;
+  optional OffTheRecordStatus otr_status = 3;
+  optional uint64 unknown_4 = 4;
+  optional EventRequestHeader event_request_header = 5;
+}
+message EasterEggResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 timestamp = 2;
+}
+// Possible enum fields: ['b', 'c']
+message SearchEntitiesRequest {
+  optional RequestHeader request_header = 1;
+  repeated bytes unknown_2 = 2;
+  optional string query = 3;
+  optional uint32 max_count = 4;
+  optional bool unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  optional bool unknown_7 = 7;
+  repeated uint32 unknown_8 = 8;
+  optional uint32 unknown_9 = 9;
+}
+message SetFocusResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 timestamp = 2;
+}
+message GetGroupConversationUrlRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+}
+// Possible enums names: ['ClientCreateConversationError']
+// Possible enum fields: ['a']
+message CreateConversationResponse {
+  optional ResponseHeader response_header = 1;
+  optional Conversation conversation = 2;
+  repeated Xmph unknown_3 = 3;
+  optional uint64 unknown_4 = 4;
+  optional string unknown_5 = 5;
+  repeated bytes unknown_6 = 6;
+  optional bool new_conversation_created = 7;
+  optional uint32 unknown_8 = 8;
+}
+// Possible enum fields: ['g', 'd', 'f']
+message SyncAllNewEventsRequest {
+  optional RequestHeader request_header = 1;
+  optional uint64 last_sync_timestamp = 2;
+  repeated Xmpq unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+  repeated bytes unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  repeated Xmtz unknown_7 = 7;
+  optional uint32 max_response_size_bytes = 8;
+  optional uint32 unknown_9 = 9;
+}
+message ReplyToInviteRequest {
+  optional ResponseHeader response_header = 1;
+  optional Conversation unknown_2 = 2;
+}
+message SearchEntitiesResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Entity entity = 2;
+  optional bool unknown_3 = 3;
+  repeated Xmls unknown_4 = 4;
+}
+// Possible enum fields: ['b']
+message SetTypingRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional TypingType type = 3;
+}
+// Possible enums names: ['ClientFieldMask']
+message QueryPresenceRequest {
+  optional RequestHeader request_header = 1;
+  repeated ParticipantId participant_id = 2;
+  repeated FieldMask field_mask = 3;
+}
+message QueryPresenceResponse {
+  optional ResponseHeader response_header = 1;
+  repeated PresenceResult presence_result = 2;
+}
+message DeclineAllInvitesRequest {
+  optional RequestHeader request_header = 1;
+  repeated Xmma unknown_2 = 2;
+}
+message RecordAnalyticsEventRequest {
+  optional RequestHeader request_header = 1;
+  repeated Xmkm unknown_2 = 2;
+  repeated Xmov unknown_3 = 3;
+  optional uint64 unknown_4 = 4;
+}
+message OpenGroupConversationFromUrlResponse {
+  optional ResponseHeader response_header = 1;
+  optional ConversationId unknown_2 = 2;
+  optional Event unknown_3 = 3;
+}
+message DismissSuggestedContactsResponse {
+  optional ResponseHeader response_header = 1;
+  repeated ParticipantId unknown_2 = 2;
+}
+message SetCallerIdConfigRequest {
+  optional RequestHeader request_header = 1;
+  repeated Xmku unknown_2 = 2;
+}
+message GetInviteSettingsRequest {
+  optional RequestHeader request_header = 1;
+  optional string unknown_2 = 2;
+}
+message ModifyOTRStatusResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional Event created_event = 4;
+  optional Conversation unknown_5 = 5;
+  optional bool unknown_6 = 6;
+}
+message SendChatMessageRequest {
+  optional RequestHeader request_header = 1;
+  optional bytes unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+  repeated EventAnnotation annotation = 5;
+  optional MessageContent message_content = 6;
+  optional ExistingMedia existing_media = 7;
+  optional EventRequestHeader event_request_header = 8;
+  optional InviteeId user_id = 9;
+  optional Location location = 10;
+  optional Xmnq unknown_11 = 11;
+  repeated ChatMessageSpec message_spec = 12;
+  optional Xmtm unknown_13 = 13;
+  optional Xmre unknown_14 = 14;
+}
+message SetPresenceRequest {
+  optional RequestHeader request_header = 1;
+  optional PresenceStateSetting presence_state_setting = 2;
+  optional DndSetting dnd_setting = 3;
+  optional DesktopOffSetting desktop_off_setting = 5;
+  optional Xmqi unknown_6 = 6;
+  optional Xmoy unknown_7 = 7;
+  optional StatusMessageSpec status_message = 8;
+  optional Xmtv unknown_9 = 9;
+}
+// Possible enums names: ['UpdateReadObserved']
+// Possible enum fields: ['c']
+message UpdateWatermarkRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional uint64 last_read_timestamp = 3;
+  optional uint32 unknown_4 = 4;
+}
+message GetSuggestedEntitiesResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Entity entity = 2;
+  optional bool unknown_3 = 3;
+  optional SuggestedContactGroup favorites = 4;
+  optional SuggestedContactGroup contacts_you_hangout_with = 5;
+  optional SuggestedContactGroup other_contacts_on_hangouts = 6;
+  optional SuggestedContactGroup other_contacts = 7;
+  optional SuggestedContactGroup dismissed_contacts = 8;
+  optional SuggestedContactGroup pinned_favorites = 9;
+}
+// Possible enum fields: ['b']
+message SetGroupLinkSharingEnabledRequest {
+  optional RequestHeader request_header = 1;
+  optional EventRequestHeader event_request_header = 2;
+  optional GroupLinkSharingStatus group_link_sharing_status = 4;
+}
+// Possible enum fields: ['a']
+message UpdateFavoriteContactResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint32 unknown_2 = 2;
+  repeated Xmns unknown_3 = 3;
+  optional bytes unknown_4 = 4;
+}
+// Possible enums names: ['ClientGetConversationError']
+// Possible enum fields: ['a']
+message GetConversationResponse {
+  optional ResponseHeader response_header = 1;
+  optional ConversationState conversation_state = 2;
+  optional uint32 unknown_3 = 3;
+  optional PresenceResult unknown_4 = 4;
+  repeated RichPresenceEnabledState unknown_5 = 5;
+  repeated Entity unknown_7 = 7;
+}
+message SyncRecentConversationsResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 sync_timestamp = 2;
+  repeated ConversationState conversation_state = 3;
+  optional uint64 continuation_end_timestamp = 4;
+  optional Xmpa unknown_5 = 5;
+  repeated Entity unknown_6 = 6;
+  optional HashModifier unknown_7 = 7;
+}
+message SetPresenceResponse {
+  optional ResponseHeader response_header = 1;
+}
+// Possible enum fields: ['a', 'i']
+message CreateConversationRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationType type = 2;
+  optional uint64 client_generated_id = 3;
+  optional string name = 4;
+  repeated InviteeId invitee_id = 5;
+  optional DeliveryMedium unknown_11 = 11;
+  optional Xmpf unknown_12 = 12;
+  optional Xmnp unknown_13 = 13;
+  optional string unknown_14 = 14;
+  optional uint32 unknown_15 = 15;
+}
+message RenameConversationRequest {
+  optional RequestHeader request_header = 1;
+  optional bytes unknown_2 = 2;
+  optional string new_name = 3;
+  optional uint64 unknown_4 = 4;
+  optional EventRequestHeader event_request_header = 5;
+}
+// Possible enums names: ['ClientSetActiveClientError']
+// Possible enum fields: ['a']
+message SetActiveClientResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+  optional uint64 unknown_4 = 4;
+}
+message SetConfigurationBitResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Xmyn unknown_2 = 2;
+  optional Xmwe unknown_3 = 3;
+}
+// Possible enum fields: ['c']
+message SetActiveClientRequest {
+  optional RequestHeader request_header = 1;
+  optional bool is_active = 2;
+  optional string full_jid = 3;
+  optional uint32 timeout_secs = 4;
+  optional bool unknown_5 = 5;
+}
+message FinishPhoneVerificationRequest {
+  optional RequestHeader request_header = 1;
+  optional PhoneNumber unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional bool unknown_4 = 4;
+  repeated PhoneNumber unknown_5 = 5;
+  optional Xmqv unknown_6 = 6;
+}
+// Possible enums names: ['AccountAgeGroup']
+// Possible enum fields: ['o', 'q', 'u']
+message GetSelfInfoResponse {
+  optional ResponseHeader response_header = 1;
+  optional Entity self_entity = 2;
+  optional bool is_known_minor = 3;
+  repeated ClientPresenceState unknown_4 = 4;
+  optional DoNotDisturbSetting dnd_state = 5;
+  optional DesktopOffSetting desktop_off_setting = 6;
+  optional PhoneData phone_data = 7;
+  repeated ConfigurationBit configuration_bit = 8;
+  optional DesktopOffState desktop_off_state = 9;
+  optional bool google_plus_user = 10;
+  optional DesktopSoundSetting desktop_sound_setting = 11;
+  optional RichPresenceState rich_presence_state = 12;
+  optional bool unknown_13 = 13;
+  optional bool unknown_14 = 14;
+  optional bool unknown_15 = 15;
+  optional uint32 unknown_16 = 16;
+  repeated ParticipantId unknown_17 = 17;
+  optional uint32 unknown_18 = 18;
+  optional Country default_country = 19;
+  repeated Xmnn unknown_20 = 20;
+  optional Xmtv unknown_22 = 22;
+  optional uint32 unknown_24 = 24;
+}
+message FinishPhoneVerificationResponse {
+  optional ResponseHeader response_header = 1;
+}
+// Possible enums names: ['ClientSendChatMessageError']
+// Possible enum fields: ['a']
+message SendChatMessageResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  repeated Xmqa unknown_4 = 4;
+  optional bytes unknown_5 = 5;
+  optional Event created_event = 6;
+  optional Conversation unknown_7 = 7;
+  optional uint32 unknown_8 = 8;
+}
+message SetRichPresenceEnabledStateResponse {
+  optional ResponseHeader response_header = 1;
+  repeated RichPresenceEnabledState unknown_2 = 2;
+}
+message GetGroupConversationUrlResponse {
+  optional ResponseHeader response_header = 1;
+  optional string group_conversation_url = 2;
+}
+message OpenGroupConversationFromUrlRequest {
+  optional RequestHeader request_header = 1;
+  optional EventRequestHeader unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+// Possible enum fields: ['b']
+message ModifyConversationViewRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional uint64 unknown_4 = 4;
+}
+message SetInviteSettingsResponse {
+  optional ResponseHeader response_header = 1;
+  optional string unknown_2 = 2;
+}
+message SendOffnetworkInvitationRequest {
+  optional RequestHeader request_header = 1;
+  optional OffnetworkAddress invitee_address = 2;
+}
+message BatchUpdate {
+  repeated StateUpdate state_update = 1;
+}
+message UndismissSuggestedContactsResponse {
+  optional ResponseHeader response_header = 1;
+  repeated ParticipantId unknown_2 = 2;
+}
+message SetRichPresenceEnabledStateRequest {
+  optional RequestHeader request_header = 1;
+  repeated RichPresenceEnabledState unknown_2 = 2;
+}
+// Possible enum fields: ['a', 'b', 'k', 'w', 'B', 'C']
+message RegisterDeviceRequest {
+  optional RequestHeader request_header = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional string unknown_4 = 4;
+  optional string unknown_5 = 5;
+  optional string unknown_7 = 7;
+  optional bytes unknown_8 = 8;
+  optional uint64 unknown_9 = 9;
+  optional string unknown_10 = 10;
+  repeated string unknown_11 = 11;
+  repeated string unknown_12 = 12;
+  optional string unknown_13 = 13;
+  repeated string unknown_14 = 14;
+  optional string unknown_15 = 15;
+  optional string unknown_16 = 16;
+  optional string unknown_17 = 17;
+  optional string unknown_18 = 18;
+  repeated string unknown_19 = 19;
+  optional string unknown_20 = 20;
+  optional string unknown_21 = 21;
+  optional uint32 unknown_22 = 22;
+  optional uint32 unknown_23 = 23;
+  optional string unknown_24 = 24;
+  optional string unknown_25 = 25;
+  optional string unknown_26 = 26;
+  optional uint32 unknown_27 = 27;
+  optional uint32 unknown_28 = 28;
+  optional string unknown_29 = 29;
+  optional bool unknown_30 = 30;
+  repeated string unknown_31 = 31;
+  optional Xmtb unknown_32 = 32;
+  optional bytes unknown_33 = 33;
+  optional string unknown_34 = 34;
+  optional string unknown_35 = 35;
+}
+message RemoveUserResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional Event created_event = 4;
+  optional Conversation unknown_5 = 5;
+}
+// Possible enum fields: ['b']
+message GetSuggestedEntitiesRequest {
+  optional RequestHeader request_header = 1;
+  repeated bytes unknown_2 = 2;
+  repeated bytes unknown_3 = 3;
+  optional uint32 max_count = 4;
+  optional bool unknown_5 = 5;
+  repeated ParticipantId unknown_6 = 6;
+  optional bool unknown_7 = 7;
+  optional SuggestedContactGroupHash favorites = 8;
+  optional SuggestedContactGroupHash contacts_you_hangout_with = 9;
+  optional SuggestedContactGroupHash other_contacts_on_hangouts = 10;
+  optional SuggestedContactGroupHash other_contacts = 11;
+  optional SuggestedContactGroupHash dismissed_contacts = 12;
+  optional SuggestedContactGroupHash pinned_favorites = 13;
+  optional bool unknown_14 = 14;
+  repeated uint32 unknown_15 = 15;
+}
+// Possible enum fields: ['c', 'e']
+// Message used by: ['AddUserRequest', 'ModifyOTRStatusRequest',
+// 'OpenGroupConversationFromUrlRequest', 'RemoveUserRequest',
+// 'RenameConversationRequest', 'SendChatMessageRequest',
+// 'SetGroupLinkSharingEnabledRequest']
+message EventRequestHeader {
+  optional ConversationId conversation_id = 1;
+  optional uint64 client_generated_id = 2;
+  optional OffTheRecordStatus expected_otr = 3;
+  optional DeliveryMedium delivery_medium = 4;
+  optional EventType event_type = 5;
+  optional Xmlm unknown_6 = 6;
+}
+message SetCallerIdConfigResponse {
+  repeated Xmkw unknown_1 = 1;
+  optional ResponseHeader response_header = 2;
+}
+message GetOffnetworkInviteUrlResponse {
+  optional ResponseHeader response_header = 1;
+  optional string unknown_2 = 2;
+}
+message GetFavoritesResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Xmns unknown_2 = 2;
+  optional bytes unknown_3 = 3;
+}
+message SetGroupLinkSharingEnabledResponse {
+  optional ResponseHeader response_header = 1;
+  optional Event created_event = 2;
+  optional Conversation updated_conversation = 3;
+}
+message GetOffnetworkInviteUrlRequest {
+  optional RequestHeader request_header = 1;
+  optional PhoneNumber unknown_2 = 2;
+  optional PhoneNumber unknown_3 = 3;
+}
+message SetTypingResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 timestamp = 2;
+}
+message ModifyConversationViewResponse {
+  optional ResponseHeader response_header = 1;
+}
+message GetEntityByIdResponse {
+  optional ResponseHeader response_header = 1;
+  repeated Entity entity = 2;
+  repeated EntityResult entity_result = 3;
+}
+message UpdateFavoriteContactRequest {
+  optional RequestHeader request_header = 1;
+  repeated Xmnt unknown_2 = 2;
+  optional bytes unknown_3 = 3;
+}
+message AddUserRequest {
+  optional RequestHeader request_header = 1;
+  optional bytes unknown_2 = 2;
+  repeated InviteeId invitee_id = 3;
+  optional uint64 unknown_4 = 4;
+  optional EventRequestHeader event_request_header = 5;
+}
+message RecordAnalyticsEventResponse {
+  optional ResponseHeader response_header = 1;
+}
+message DeleteConversationResponse {
+  optional ResponseHeader response_header = 1;
+  optional DeleteAction delete_action = 2;
+}
+message SyncAllNewEventsResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint64 sync_timestamp = 2;
+  repeated ConversationState conversation_state = 3;
+  optional bool unknown_4 = 4;
+  optional Xmpa unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  repeated Entity unknown_7 = 7;
+  optional HashModifier unknown_8 = 8;
+}
+// Possible enums names: ['ClientPhoneNumberVerificationMethod']
+// Possible enum fields: ['b']
+message StartPhoneNumberVerificationRequest {
+  optional RequestHeader request_header = 1;
+  optional PhoneNumber unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional Xmte unknown_4 = 4;
+}
+// Possible enum fields: ['b', 'c']
+message SetFocusRequest {
+  optional RequestHeader request_header = 1;
+  optional ConversationId conversation_id = 2;
+  optional FocusType type = 3;
+  optional uint32 timeout_secs = 4;
+  optional bool unknown_6 = 6;
+}
+// Possible enum fields: ['d']
+message SetConfigurationBitRequest {
+  optional RequestHeader request_header = 1;
+  repeated ConfigurationBit unknown_2 = 2;
+  optional DesktopSoundSetting unknown_3 = 3;
+  optional bool unknown_4 = 4;
+  optional uint32 unknown_5 = 5;
+}
+// Possible enums names: ['OffnetworkInvitationError']
+// Possible enum fields: ['a']
+message SendOffnetworkInvitationResponse {
+  optional ResponseHeader response_header = 1;
+  optional uint32 unknown_2 = 2;
+}
+message UpdateWatermarkResponse {
+  optional ResponseHeader response_header = 1;
+}
+// Possible enum fields: ['c']
+message StartPhoneNumberVerificationResponse {
+  optional ResponseHeader response_header = 1;
+  optional Xmqv unknown_2 = 2;
+  optional bool unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+}
+message UndismissSuggestedContactsRequest {
+  optional RequestHeader request_header = 1;
+  repeated ParticipantId unknown_2 = 2;
+}
+// Possible enum fields: ['f']
+// Message used by: ['AddUserRequest', 'CreateConversationRequest',
+// 'DeclineAllInvitesRequest', 'DeleteConversationRequest',
+// 'DismissSuggestedContactsRequest', 'EasterEggRequest',
+// 'FinishPhoneVerificationRequest', 'GetConversationRequest',
+// 'GetEntityByIdRequest', 'GetFavoritesRequest',
+// 'GetGroupConversationUrlRequest', 'GetInviteSettingsRequest',
+// 'GetOffnetworkInviteUrlRequest', 'GetSelfInfoRequest',
+// 'GetSuggestedEntitiesRequest', 'MarkEventObservedRequest',
+// 'ModifyConversationViewRequest', 'ModifyOTRStatusRequest',
+// 'OpenGroupConversationFromUrlRequest', 'QueryPresenceRequest',
+// 'RecordAnalyticsEventRequest', 'RegisterDeviceRequest',
+// 'RemoveUserRequest', 'RenameConversationRequest',
+// 'ReplyToInviteRequest', 'SearchEntitiesRequest',
+// 'SendChatMessageRequest', 'SendOffnetworkInvitationRequest',
+// 'SetActiveClientRequest', 'SetCallerIdConfigRequest',
+// 'SetConfigurationBitRequest',
+// 'SetConversationNotificationLevelRequest', 'SetFocusRequest',
+// 'SetGroupLinkSharingEnabledRequest', 'SetInviteSettingsRequest',
+// 'SetPresenceRequest', 'SetRichPresenceEnabledStateRequest',
+// 'SetTypingRequest', 'StartPhoneNumberVerificationRequest',
+// 'SyncAllNewEventsRequest', 'SyncRecentConversationsRequest',
+// 'UndismissSuggestedContactsRequest', 'UpdateFavoriteContactRequest',
+// 'UpdateWatermarkRequest', 'Xmuq', 'Xmus', 'Xmuu', 'Xmvd', 'Xmvf',
+// 'Xmvk', 'Xmvm', 'Xmvo', 'Xmvq', 'Xmvs', 'Xmvu', 'Xmvw', 'Xmwv',
+// 'Xmxd', 'Xmxf', 'Xmxh', 'Xmyo', 'Xmyr', 'Xmyv', 'Xmyw']
+message RequestHeader {
+  optional ClientVersion client_version = 1;
+  optional ClientIdentifier client_identifier = 2;
+  optional Xmlb unknown_3 = 3;
+  optional string language_code = 4;
+  optional bool unknown_5 = 5;
+  optional uint32 unknown_6 = 6;
+  optional Xpvg unknown_7 = 7;
+  optional string unknown_8 = 8;
+  optional HashModifier unknown_9 = 9;
+}
+// Message used by: ['MarkEventObservedRequest']
+message Xmpu {
+  optional ConversationId unknown_1 = 1;
+  repeated string unknown_2 = 2;
+}
+// Message used by: ['EntityResult', 'GetEntityByIdRequest']
+message EntityLookupSpec {
+  optional string gaia_id = 1;
+  optional string unknown_2 = 2;
+  optional string email = 3;
+  optional string phone = 4;
+  optional string unknown_5 = 5;
+  optional bool create_offnetwork_gaia = 6;
+}
+// Possible enum fields: ['a', 'f']
+// Message used by: ['AddUserResponse', 'CreateConversationResponse',
+// 'DeclineAllInvitesResponse', 'DeleteConversationResponse',
+// 'DismissSuggestedContactsResponse', 'EasterEggResponse',
+// 'FinishPhoneVerificationResponse', 'GetConversationResponse',
+// 'GetEntityByIdResponse', 'GetFavoritesResponse',
+// 'GetGroupConversationUrlResponse', 'GetInviteSettingsResponse',
+// 'GetOffnetworkInviteUrlResponse', 'GetSelfInfoResponse',
+// 'GetSuggestedEntitiesResponse', 'MarkEventObservedResponse',
+// 'ModifyConversationViewResponse', 'ModifyOTRStatusResponse',
+// 'OpenGroupConversationFromUrlResponse', 'QueryPresenceResponse',
+// 'RecordAnalyticsEventResponse', 'RegisterDeviceResponse',
+// 'RemoveUserResponse', 'RenameConversationResponse',
+// 'ReplyToInviteRequest', 'SearchEntitiesResponse',
+// 'SendChatMessageResponse', 'SendOffnetworkInvitationResponse',
+// 'SetActiveClientResponse', 'SetCallerIdConfigResponse',
+// 'SetConfigurationBitResponse',
+// 'SetConversationNotificationLevelResponse', 'SetFocusResponse',
+// 'SetGroupLinkSharingEnabledResponse', 'SetInviteSettingsResponse',
+// 'SetPresenceResponse', 'SetRichPresenceEnabledStateResponse',
+// 'SetTypingResponse', 'StartPhoneNumberVerificationResponse',
+// 'SyncAllNewEventsResponse', 'SyncRecentConversationsResponse',
+// 'UndismissSuggestedContactsResponse', 'UpdateFavoriteContactResponse',
+// 'UpdateWatermarkResponse', 'Xmsi', 'Xmur', 'Xmut', 'Xmuv', 'Xmve',
+// 'Xmvg', 'Xmvl', 'Xmvn', 'Xmvp', 'Xmvr', 'Xmvt', 'Xmvv', 'Xmvx',
+// 'Xmww', 'Xmxe', 'Xmxg', 'Xmxi', 'Xmys', 'Xmyx', 'Xmyz']
+message ResponseHeader {
+  optional ResponseStatus status = 1;
+  optional string error_description = 2;
+  optional string debug_url = 3;
+  optional uint64 request_trace_id = 4;
+  optional uint64 current_server_time = 5;
+  optional uint64 unknown_6 = 6;
+  optional string unknown_7 = 7;
+  optional string unknown_8 = 8;
+  optional Xmts unknown_9 = 9;
+  optional string unknown_10 = 10;
+  optional uint32 unknown_11 = 11;
+}
+// Possible enums names: ['ClientInviteeErrorDetail']
+// Possible enum fields: ['d']
+// Message used by: ['AddUserResponse', 'CreateConversationResponse']
+message Xmph {
+  optional InviteeId unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional bytes unknown_4 = 4;
+  optional string unknown_5 = 5;
+  optional uint32 unknown_6 = 6;
+}
+// Possible enum fields: ['g', 'r', 'v', 'z']
+// Message used by: ['AddUserResponse', 'ConversationState',
+// 'EventNotification', 'ModifyOTRStatusResponse',
+// 'OpenGroupConversationFromUrlResponse', 'RemoveUserResponse',
+// 'RenameConversationResponse', 'SendChatMessageResponse',
+// 'SetGroupLinkSharingEnabledResponse']
+message Event {
+  optional ConversationId conversation_id = 1;
+  optional ParticipantId sender_id = 2;
+  optional uint64 timestamp = 3;
+  optional UserEventState self_event_state = 4;
+  optional SourceType source_type = 6;
+  optional ChatMessage chat_message = 7;
+  optional MembershipChange membership_change = 9;
+  optional ConversationRename conversation_rename = 10;
+  optional HangoutEvent hangout_event = 11;
+  optional string event_id = 12;
+  optional uint64 expiration_timestamp = 13;
+  optional OTRModification otr_modification = 14;
+  optional bool advances_sort_timestamp = 15;
+  optional OffTheRecordStatus otr_status = 16;
+  optional bool persisted = 17;
+  optional DeliveryMedium medium_type = 20;
+  optional Xmnf unknown_21 = 21;
+  optional Xmrb unknown_22 = 22;
+  optional EventType event_type = 23;
+  optional uint64 event_version = 24;
+  optional HashModifier hash_modifier = 26;
+  optional uint64 unknown_27 = 27;
+  optional uint32 unknown_28 = 28;
+  optional Xmqn unknown_29 = 29;
+  optional GroupLinkSharingModification group_link_sharing_modification = 31;
+}
+// Possible enums names: ['ClientNetworkType']
+// Possible enum fields: ['c', 'i', 'j', 'p', 't']
+// Message used by: ['AddUserResponse', 'ConversationNotification',
+// 'ConversationState', 'CreateConversationResponse',
+// 'ModifyOTRStatusResponse', 'RemoveUserResponse',
+// 'RenameConversationResponse', 'ReplyToInviteRequest',
+// 'SendChatMessageResponse', 'SetGroupLinkSharingEnabledResponse',
+// 'StateUpdate']
+message Conversation {
+  optional ConversationId conversation_id = 1;
+  optional ConversationType type = 2;
+  optional string name = 3;
+  optional UserConversationState self_conversation_state = 4;
+  repeated bytes unknown_5 = 5;
+  repeated bytes unknown_6 = 6;
+  repeated UserReadState read_state = 8;
+  optional bool has_active_hangout = 9;
+  optional OffTheRecordStatus otr_status = 10;
+  optional OffTheRecordToggle otr_toggle = 11;
+  optional bool conversation_history_supported = 12;
+  repeated ParticipantId current_participant = 13;
+  repeated ConversationParticipantData participant_data = 14;
+  optional bool unknown_15 = 15;
+  optional bool unknown_16 = 16;
+  optional Xmnp unknown_17 = 17;
+  repeated NetworkType network_type = 18;
+  optional ForceHistory force_history_state = 19;
+  optional string unknown_20 = 20;
+  optional GroupLinkSharingStatus group_link_sharing_status = 22;
+  optional Xmlm unknown_23 = 23;
+}
+// Message used by: ['Conversation', 'ConversationSpec',
+// 'ConversationState', 'DeleteConversationNotification',
+// 'DeleteConversationRequest', 'EasterEggNotification',
+// 'EasterEggRequest', 'Event', 'EventRequestHeader',
+// 'GetGroupConversationUrlRequest', 'HangoutEvent',
+// 'ModifyConversationViewRequest',
+// 'OpenGroupConversationFromUrlResponse', 'ReplyToInviteNotification',
+// 'ReplyToInviteRequest',
+// 'SetConversationNotificationLevelNotification',
+// 'SetConversationNotificationLevelRequest', 'SetFocusNotification',
+// 'SetFocusRequest', 'SetTypingNotification', 'SetTypingRequest',
+// 'SuggestedContact', 'UpdateWatermarkRequest',
+// 'ViewModificationNotification', 'WatermarkNotification', 'Xmll',
+// 'Xmln', 'Xmls', 'Xmns', 'Xmnx', 'Xmow', 'Xmpb', 'Xmpq', 'Xmpu',
+// 'Xmql', 'Xmsm', 'Xmtz', 'Xmvc', 'Xmzb']
+message ConversationId {
+  optional string id = 1;
+}
+// Possible enums names: ['NotificationLevel']
+// Possible enum fields: ['a', 'b', 'c']
+// Message used by: ['GetInviteSettingsResponse',
+// 'SetInviteSettingsRequest']
+message Xmpd {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  repeated Xmpe unknown_4 = 4;
+}
+// Possible enums names: ['EasterEggType']
+// Possible enum fields: ['c']
+// Message used by: ['EasterEggNotification', 'EasterEggRequest']
+message EasterEgg {
+  optional string message = 1;
+  optional string unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional Xmko unknown_4 = 4;
+}
+// Message used by: ['BlockStateChange', 'Conversation',
+// 'ConversationParticipantData', 'DismissSuggestedContactsRequest',
+// 'DismissSuggestedContactsResponse', 'EasterEggNotification', 'Entity',
+// 'Event', 'GetSelfInfoResponse', 'GetSuggestedEntitiesRequest',
+// 'HangoutEvent', 'MembershipChange', 'PresenceResult',
+// 'QueryPresenceRequest', 'RemoveUserRequest', 'SetFocusNotification',
+// 'SetTypingNotification', 'UndismissSuggestedContactsRequest',
+// 'UndismissSuggestedContactsResponse', 'UserConversationState',
+// 'UserEventState', 'UserReadState', 'WatermarkNotification', 'Xmko',
+// 'Xmlh', 'Xmll', 'Xmns', 'Xmpb', 'Xmpn']
+message ParticipantId {
+  optional string gaia_id = 1;
+  optional string chat_id = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['GetConversationRequest']
+message ConversationSpec {
+  optional ConversationId conversation_id = 1;
+  repeated bytes unknown_2 = 2;
+  repeated InviteeId unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+  optional string unknown_5 = 5;
+}
+// Message used by: ['ConversationState', 'GetConversationRequest']
+message EventContinuationToken {
+  optional string event_id = 1;
+  optional bytes storage_continuation_token = 2;
+  optional uint64 event_timestamp = 3;
+}
+// Message used by: ['MarkEventObservedNotification',
+// 'MarkEventObservedResponse']
+message Xmql {
+  optional ConversationId unknown_1 = 1;
+  repeated Xmqm unknown_2 = 2;
+}
+// Message used by: ['SyncAllNewEventsRequest']
+message Xmpq {
+  optional ConversationId unknown_2 = 2;
+  repeated string unknown_4 = 4;
+}
+// Message used by: ['SyncAllNewEventsRequest']
+message Xmtz {
+  optional ConversationId unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Possible enums names: ['BabelUserState', 'HadPastHangoutState']
+// Possible enum fields: ['b', 'k', 'l', 'm']
+// Message used by: ['EntityResult', 'GetConversationResponse',
+// 'GetEntityByIdResponse', 'GetSelfInfoResponse',
+// 'GetSuggestedEntitiesResponse', 'SearchEntitiesResponse',
+// 'SuggestedContact', 'SyncAllNewEventsResponse',
+// 'SyncRecentConversationsResponse']
+message Entity {
+  optional bytes unknown_1 = 1;
+  optional bytes unknown_2 = 2;
+  optional bytes unknown_3 = 3;
+  optional bytes unknown_4 = 4;
+  optional bytes unknown_5 = 5;
+  optional bool unknown_7 = 7;
+  optional Presence presence = 8;
+  optional ParticipantId id = 9;
+  optional EntityProperties properties = 10;
+  optional bool unknown_11 = 11;
+  optional Xmmt unknown_12 = 12;
+  optional ParticipantType entity_type = 13;
+  optional bool unknown_14 = 14;
+  optional uint32 unknown_15 = 15;
+  optional PastHangoutState unknown_16 = 16;
+  optional uint32 unknown_17 = 17;
+  optional bool unknown_18 = 18;
+}
+// Message used by: ['SearchEntitiesResponse']
+message Xmls {
+  optional ConversationId unknown_1 = 1;
+  optional string unknown_2 = 2;
+}
+// Message used by: ['GetConversationResponse', 'PresenceNotification',
+// 'QueryPresenceResponse']
+message PresenceResult {
+  optional ParticipantId user_id = 1;
+  optional Presence presence = 2;
+  optional Xmqx unknown_3 = 3;
+}
+// Possible enum fields: ['c']
+// Message used by: ['DeclineAllInvitesRequest']
+message Xmma {
+  optional uint64 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Possible enums names: ['EventType', 'ChatAction',
+// 'EventDeliveryMechanism']
+// Possible enum fields: ['b', 'j', 'k', 'o', 'p', 'q']
+// Message used by: ['RecordAnalyticsEventRequest']
+message Xmkm {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional bool unknown_4 = 4;
+  optional bool unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  optional bool unknown_7 = 7;
+  optional bool unknown_8 = 8;
+  optional uint32 unknown_9 = 9;
+  optional uint32 unknown_10 = 10;
+  optional uint64 unknown_11 = 11;
+  optional string unknown_12 = 12;
+  optional uint64 unknown_13 = 13;
+  optional uint32 unknown_14 = 14;
+  optional uint32 unknown_15 = 15;
+  optional uint32 unknown_16 = 16;
+}
+// Message used by: ['RecordAnalyticsEventRequest']
+message Xmov {
+  optional Xnly unknown_1 = 1;
+  optional Xmow unknown_2 = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['SetCallerIdConfigRequest']
+message Xmku {
+  optional PhoneNumber unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Possible enum fields: ['b']
+// Message used by: ['ChatMessage', 'SendChatMessageRequest']
+message EventAnnotation {
+  optional uint32 type = 1;
+  optional string value = 2;
+}
+// Message used by: ['ChatMessage', 'SendChatMessageRequest',
+// 'StatusMessage', 'StatusMessageState']
+message MessageContent {
+  repeated Segment segment = 1;
+  repeated Attachment attachment = 2;
+}
+// Message used by: ['SendChatMessageRequest']
+message ExistingMedia {
+  optional Photo photo = 1;
+  optional Xmnl unknown_2 = 2;
+  optional Xmkz unknown_3 = 3;
+}
+// Message used by: ['AddUserRequest', 'ConversationSpec',
+// 'CreateConversationRequest', 'SendChatMessageRequest', 'Xmph', 'Xmvw',
+// 'Xmyt']
+message InviteeId {
+  optional string unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_4 = 4;
+  optional bytes unknown_5 = 5;
+  repeated Xmpj unknown_6 = 6;
+  optional PhoneNumber unknown_7 = 7;
+}
+// Message used by: ['ChatMessageSpec', 'SendChatMessageRequest']
+message Location {
+  optional Place place = 1;
+  optional bytes unknown_2 = 2;
+  optional Xmkz unknown_3 = 3;
+}
+// Possible enum fields: ['b', 'c']
+// Message used by: ['ChatMessageSpec', 'SendChatMessageRequest']
+message Xmnq {
+  optional string unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional string unknown_4 = 4;
+  optional string unknown_5 = 5;
+  optional string unknown_6 = 6;
+  optional Xmkz unknown_7 = 7;
+}
+// Message used by: ['SendChatMessageRequest', 'StatusMessageSpec']
+message ChatMessageSpec {
+  repeated Segment segment = 1;
+  optional Xmpw unknown_2 = 2;
+  optional Location unknown_3 = 3;
+  optional Xmnq unknown_4 = 4;
+  optional Xmtm unknown_5 = 5;
+  optional Xmre unknown_6 = 6;
+}
+// Message used by: ['ChatMessageSpec', 'SendChatMessageRequest']
+message Xmtm {
+  optional Xmti unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional Xmkz unknown_3 = 3;
+}
+// Message used by: ['ChatMessageSpec', 'SendChatMessageRequest']
+message Xmre {
+  optional string unknown_1 = 1;
+  optional Xmkz unknown_2 = 2;
+}
+// Possible enums names: ['ClientPresenceState']
+// Possible enum fields: ['b']
+// Message used by: ['SetPresenceRequest']
+message PresenceStateSetting {
+  optional uint64 timeout_secs = 1;
+  optional ClientPresenceStateType type = 2;
+}
+// Message used by: ['SetPresenceRequest']
+message DndSetting {
+  optional bool do_not_disturb = 1;
+  optional uint64 timeout_secs = 2;
+}
+// Message used by: ['GetSelfInfoResponse', 'SelfPresenceNotification',
+// 'SetPresenceRequest']
+message DesktopOffSetting {
+  optional bool desktop_off = 1;
+}
+// Message used by: ['SetPresenceRequest']
+message Xmqi {
+  optional string unknown_1 = 1;
+}
+// Possible enum fields: ['a']
+// Message used by: ['SetPresenceRequest']
+message Xmoy {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Message used by: ['SetPresenceRequest']
+message StatusMessageSpec {
+  repeated ChatMessageSpec status_message = 1;
+}
+// Possible enum fields: ['a']
+// Message used by: ['GetSelfInfoResponse', 'SetPresenceRequest']
+message Xmtv {
+  optional uint32 unknown_1 = 1;
+}
+// Message used by: ['GetSuggestedEntitiesResponse']
+message SuggestedContactGroup {
+  optional bool hash_matched = 1;
+  optional bytes hash = 2;
+  repeated SuggestedContact contact = 3;
+}
+// Possible enum fields: ['d']
+// Message used by: ['GetFavoritesResponse',
+// 'UpdateFavoriteContactResponse', 'Xmnt']
+message Xmns {
+  optional ParticipantId unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional ConversationId unknown_3 = 3;
+}
+// Message used by: ['GetConversationResponse',
+// 'SyncAllNewEventsResponse', 'SyncRecentConversationsResponse']
+message ConversationState {
+  optional ConversationId conversation_id = 1;
+  optional Conversation conversation = 2;
+  repeated Event event = 3;
+  optional bool unknown_4 = 4;
+  optional EventContinuationToken event_continuation_token = 5;
+  optional uint64 unknown_6 = 6;
+  repeated DeleteAction unknown_7 = 7;
+  optional EventContinuationToken unknown_8 = 8;
+}
+// Possible enum fields: ['b']
+// Message used by: ['GetConversationResponse',
+// 'RichPresenceEnabledStateNotification', 'RichPresenceState',
+// 'SetRichPresenceEnabledStateRequest',
+// 'SetRichPresenceEnabledStateResponse']
+message RichPresenceEnabledState {
+  optional RichPresenceType type = 1;
+  optional bool enabled = 2;
+}
+// Possible enum fields: ['a']
+// Message used by: ['SyncAllNewEventsResponse',
+// 'SyncRecentConversationsResponse', 'Xmpc']
+message Xmpa {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+  repeated Xmmc unknown_3 = 3;
+}
+// Message used by: ['Event', 'RequestHeader',
+// 'SyncAllNewEventsResponse', 'SyncRecentConversationsResponse']
+message HashModifier {
+  optional string update_id = 1;
+  optional uint64 hash_diff = 2;
+  optional uint64 unknown_3 = 3;
+  optional uint64 version = 4;
+}
+// Possible enum fields: ['a']
+// Message used by: ['CreateConversationRequest', 'DeliveryMediumOption',
+// 'Event', 'EventRequestHeader', 'Xmln']
+message DeliveryMedium {
+  optional DeliveryMediumType medium_type = 1;
+  optional PhoneNumber phone_number = 2;
+}
+// Message used by: ['CreateConversationRequest']
+message Xmpf {
+  optional string unknown_1 = 1;
+}
+// Message used by: ['Conversation', 'CreateConversationRequest']
+message Xmnp {
+  repeated Xmnr unknown_1 = 1;
+}
+// Message used by: ['SetConfigurationBitResponse', 'Xmyo', 'Xmys']
+message Xmyn {
+  optional Xmyq unknown_1 = 1;
+  optional bool unknown_2 = 2;
+}
+// Message used by: ['SetConfigurationBitResponse', 'Xmuq', 'Xmur',
+// 'Xmus', 'Xmut', 'Xmuu', 'Xmuv', 'Xmvd', 'Xmve', 'Xmvf', 'Xmvg',
+// 'Xmvk', 'Xmvl', 'Xmvm', 'Xmvn', 'Xmvo', 'Xmvp', 'Xmvq', 'Xmvr',
+// 'Xmvs', 'Xmvt', 'Xmvu', 'Xmvv', 'Xmvw', 'Xmvx', 'Xmwv', 'Xmww',
+// 'Xmxd', 'Xmxe', 'Xmxf', 'Xmxg', 'Xmxh', 'Xmxi', 'Xmxt', 'Xmxx',
+// 'Xmxy', 'Xmyc', 'Xmyd', 'Xmye', 'Xmyi', 'Xmyj', 'Xmyl', 'Xmyo',
+// 'Xmyr', 'Xmys', 'Xmyw', 'Xmyx']
+message Xmwe {
+  optional uint64 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional Xmwf unknown_3 = 3;
+}
+// Message used by: ['ConversationParticipantData', 'DeliveryMedium',
+// 'FinishPhoneVerificationRequest', 'GetOffnetworkInviteUrlRequest',
+// 'InviteeId', 'Phone', 'StartPhoneNumberVerificationRequest', 'Xmku',
+// 'Xmkw', 'Xmpg', 'Xmpm', 'Xmtb', 'Xnbi', 'Xnpq']
+message PhoneNumber {
+  optional string e164 = 1;
+  optional I18nData i18n_data = 2;
+}
+// Message used by: ['FinishPhoneVerificationRequest',
+// 'StartPhoneNumberVerificationResponse']
+message Xmqv {
+}
+// Possible enum fields: ['c']
+// Message used by: ['GetSelfInfoResponse', 'SelfPresenceNotification']
+message ClientPresenceState {
+  optional ClientIdentifier identifier = 1;
+  optional ClientPresenceStateType state = 2;
+  optional uint64 unknown_3 = 3;
+}
+// Message used by: ['GetSelfInfoResponse', 'NotificationSettings',
+// 'SelfPresenceNotification']
+message DoNotDisturbSetting {
+  optional bool do_not_disturb = 1;
+  optional uint64 expiration_timestamp = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['GetSelfInfoResponse']
+message PhoneData {
+  repeated Phone phone = 1;
+  repeated Xmkw unknown_2 = 2;
+  optional CallerIdSettingsMask caller_id_settings_mask = 3;
+}
+// Possible enum fields: ['b']
+// Message used by: ['GetSelfInfoResponse', 'SetConfigurationBitRequest',
+// 'SetNotificationSettingNotification']
+message ConfigurationBit {
+  optional ConfigurationBitType configuration_bit_type = 1;
+  optional bool value = 2;
+}
+// Message used by: ['GetSelfInfoResponse', 'SelfPresenceNotification']
+message DesktopOffState {
+  optional bool desktop_off = 1;
+  optional uint64 version = 2;
+}
+// Possible enums names: ['SoundState']
+// Possible enum fields: ['a', 'b']
+// Message used by: ['GetSelfInfoResponse', 'SetConfigurationBitRequest',
+// 'SetNotificationSettingNotification']
+message DesktopSoundSetting {
+  optional SoundState desktop_sound_state = 1;
+  optional SoundState desktop_ring_sound_state = 2;
+}
+// Message used by: ['GetSelfInfoResponse', 'SelfPresenceNotification']
+message RichPresenceState {
+  optional Xmqj unknown_1 = 1;
+  repeated Xmoz unknown_2 = 2;
+  repeated RichPresenceEnabledState rich_presence_enabled_state = 3;
+  optional StatusMessageState status_message = 4;
+}
+// Possible enum fields: ['b']
+// Message used by: ['GetSelfInfoResponse']
+message Country {
+  optional string region_code = 1;
+  optional uint32 country_code = 2;
+}
+// Possible enums names: ['FlagType', 'LogAction']
+// Possible enum fields: ['c', 'e']
+// Message used by: ['GetSelfInfoResponse']
+message Xmnn {
+  optional string unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional Xmno unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+}
+// Message used by: ['SendChatMessageResponse']
+message Xmqa {
+  optional Attachment unknown_1 = 1;
+}
+// Possible enums names: ['Type']
+// Possible enum fields: ['a']
+// Message used by: ['SendOffnetworkInvitationRequest']
+message OffnetworkAddress {
+  optional OffnetworkAddressType type = 1;
+  optional string unknown_2 = 2;
+  optional string email = 3;
+}
+// Message used by: ['BatchUpdate']
+message StateUpdate {
+  optional StateUpdateHeader state_update_header = 1;
+  optional ConversationNotification unknown_2 = 2;
+  optional EventNotification unknown_3 = 3;
+  optional SetFocusNotification unknown_4 = 4;
+  optional SetTypingNotification unknown_5 = 5;
+  optional SetConversationNotificationLevelNotification unknown_6 = 6;
+  optional ReplyToInviteNotification unknown_7 = 7;
+  optional WatermarkNotification unknown_8 = 8;
+  optional bytes unknown_10 = 10;
+  optional ViewModificationNotification unknown_11 = 11;
+  optional EasterEggNotification unknown_12 = 12;
+  optional Conversation conversation = 13;
+  optional SelfPresenceNotification unknown_14 = 14;
+  optional DeleteConversationNotification unknown_15 = 15;
+  optional PresenceNotification unknown_16 = 16;
+  optional BlockNotification unknown_17 = 17;
+  optional Xmpc unknown_18 = 18;
+  optional SetNotificationSettingNotification unknown_19 = 19;
+  optional RichPresenceEnabledStateNotification unknown_20 = 20;
+  optional Xmlh unknown_21 = 21;
+  optional ClientDeclineAllInvitesNotification unknown_22 = 22;
+  optional Xmln unknown_23 = 23;
+  optional Xmnx unknown_25 = 25;
+  optional Xmll unknown_26 = 26;
+  optional Xmsm unknown_27 = 27;
+  optional Xmkv unknown_28 = 28;
+  optional Xmpb unknown_29 = 29;
+  optional MarkEventObservedNotification unknown_30 = 30;
+  optional Xmos unknown_31 = 31;
+}
+// Message used by: ['RegisterDeviceRequest']
+message Xmtb {
+  optional PhoneNumber unknown_1 = 1;
+}
+// Possible enum fields: ['a']
+// Message used by: ['GetSuggestedEntitiesRequest']
+message SuggestedContactGroupHash {
+  optional uint32 max_results = 1;
+  optional bytes hash = 2;
+}
+// Possible enum fields: ['a', 'b', 'c']
+// Message used by: ['Conversation', 'EventRequestHeader']
+message Xmlm {
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_10 = 10;
+  optional uint32 unknown_13 = 13;
+}
+// Possible enums names: ['ClientIneligibilityCause']
+// Possible enum fields: ['c']
+// Message used by: ['PhoneData', 'SetCallerIdConfigResponse', 'Xmkv']
+message Xmkw {
+  optional PhoneNumber unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional Xnbi unknown_3 = 3;
+  optional bool unknown_4 = 4;
+}
+// Message used by: ['GetEntityByIdResponse']
+message EntityResult {
+  optional EntityLookupSpec lookup_spec = 1;
+  repeated Entity entity = 2;
+}
+// Message used by: ['UpdateFavoriteContactRequest', 'Xmlh']
+message Xmnt {
+  optional Xmns unknown_1 = 1;
+  optional bool unknown_2 = 2;
+}
+// Possible enum fields: ['b']
+// Message used by: ['ConversationState',
+// 'DeleteConversationNotification', 'DeleteConversationResponse']
+message DeleteAction {
+  optional uint64 delete_action_timestamp = 1;
+  optional uint64 delete_upper_bound_timestamp = 2;
+  optional DeleteType delete_type = 3;
+  repeated string unknown_4 = 4;
+}
+// Message used by: ['StartPhoneNumberVerificationRequest']
+message Xmte {
+  optional string unknown_1 = 1;
+}
+// Possible enums names: ['ClientId', 'ClientBuildType']
+// Possible enum fields: ['a', 'b', 'g']
+// Message used by: ['RequestHeader']
+message ClientVersion {
+  optional ClientId client_id = 1;
+  optional ClientBuildType build_type = 2;
+  optional string major_version = 3;
+  optional uint64 version_timestamp = 4;
+  optional string device_os_version = 5;
+  optional string device_hardware = 6;
+  optional uint32 unknown_7 = 7;
+}
+// Message used by: ['ClientPresenceState', 'RequestHeader', 'Xmoz']
+message ClientIdentifier {
+  optional string resource = 1;
+  optional string header_id = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_4 = 4;
+}
+// Message used by: ['RequestHeader']
+message Xmlb {
+  optional uint64 unknown_1 = 1;
+}
+// Possible enum fields: ['a', 'b', 'c']
+// Message used by: ['RequestHeader', 'Xnas']
+message Xpvg {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Possible enums names: ['ClientSyncHintAnswer']
+// Possible enum fields: ['a']
+// Message used by: ['ResponseHeader']
+message Xmts {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['Event']
+message UserEventState {
+  optional ParticipantId user_id = 1;
+  optional uint64 client_generated_id = 2;
+  optional NotificationLevel notification_level = 3;
+  optional Xmtp unknown_4 = 4;
+}
+// Message used by: ['Event']
+message ChatMessage {
+  repeated EventAnnotation annotation = 2;
+  optional MessageContent message_content = 3;
+}
+// Possible enum fields: ['a', 'c']
+// Message used by: ['Event']
+message MembershipChange {
+  optional MembershipChangeType type = 1;
+  repeated bytes unknown_2 = 2;
+  repeated ParticipantId participant_ids = 3;
+  optional uint32 unknown_4 = 4;
+}
+// Message used by: ['Event']
+message ConversationRename {
+  optional string new_name = 1;
+  optional string old_name = 2;
+}
+// Possible enum fields: ['a', 'g']
+// Message used by: ['Event']
+message HangoutEvent {
+  optional HangoutEventType event_type = 1;
+  repeated ParticipantId participant_id = 2;
+  optional uint64 unknown_3 = 3;
+  optional ConversationId unknown_4 = 4;
+  optional uint64 unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  optional uint32 unknown_7 = 7;
+}
+// Possible enum fields: ['a', 'b', 'c', 'd']
+// Message used by: ['Event']
+message OTRModification {
+  optional OffTheRecordStatus old_otr_status = 1;
+  optional OffTheRecordStatus new_otr_status = 2;
+  optional OffTheRecordToggle old_otr_toggle = 3;
+  optional OffTheRecordToggle new_otr_toggle = 4;
+}
+// Message used by: ['Event']
+message Xmnf {
+  optional Xmpg unknown_1 = 1;
+  optional Xmpg unknown_2 = 2;
+}
+// Possible enums names: ['Type']
+// Possible enum fields: ['a']
+// Message used by: ['Event']
+message Xmrb {
+  optional uint32 unknown_1 = 1;
+}
+// Message used by: ['Event']
+message Xmqn {
+  optional string unknown_1 = 1;
+}
+// Possible enum fields: ['a']
+// Message used by: ['Event']
+message GroupLinkSharingModification {
+  optional GroupLinkSharingStatus new_status = 1;
+}
+// Possible enums names: ['InvitationAffinity',
+// 'ClientInvitationDisplayType']
+// Possible enum fields: ['a', 'c', 'k', 'n']
+// Message used by: ['Conversation']
+message UserConversationState {
+  optional uint64 client_generated_id = 2;
+  optional UserReadState self_read_state = 7;
+  optional ConversationStatus status = 8;
+  optional NotificationLevel notification_level = 9;
+  repeated ConversationView view = 10;
+  optional ParticipantId inviter_id = 11;
+  optional uint64 invite_timestamp = 12;
+  optional uint64 sort_timestamp = 13;
+  optional uint64 active_timestamp = 14;
+  optional InvitationAffinity invite_affinity = 15;
+  optional bool unknown_16 = 16;
+  repeated DeliveryMediumOption delivery_medium_option = 17;
+  optional uint32 unknown_18 = 18;
+  optional Xmpo unknown_19 = 19;
+  optional Xmtw unknown_20 = 20;
+  optional bool unknown_21 = 21;
+}
+// Message used by: ['Conversation', 'UserConversationState']
+message UserReadState {
+  optional ParticipantId participant_id = 1;
+  optional uint64 latest_read_timestamp = 2;
+}
+// Possible enum fields: ['d', 'g', 'e']
+// Message used by: ['Conversation']
+message ConversationParticipantData {
+  optional ParticipantId id = 1;
+  optional string fallback_name = 2;
+  optional InvitationStatus invitation_status = 3;
+  optional PhoneNumber unknown_4 = 4;
+  optional ParticipantType participant_type = 5;
+  optional InvitationStatus new_invitation_status = 6;
+  optional bool unknown_7 = 7;
+}
+// Possible enum fields: ['d']
+// Message used by: ['Xmpd']
+message Xmpe {
+  optional uint64 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Possible enums names: ['ActionType']
+// Possible enum fields: ['a']
+// Message used by: ['EasterEgg']
+message Xmko {
+  optional uint32 unknown_1 = 1;
+  optional ParticipantId unknown_2 = 2;
+  optional ParticipantId unknown_3 = 3;
+}
+// Possible enum fields: ['d']
+// Message used by: ['Xmql']
+message Xmqm {
+  optional string unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Message used by: ['Entity', 'PresenceResult',
+// 'SelfPresenceNotification']
+message Presence {
+  optional bool reachable = 1;
+  optional bool available = 2;
+  repeated Xmmm unknown_3 = 3;
+  optional Xmqh unknown_4 = 4;
+  optional Xmox unknown_5 = 5;
+  optional DeviceStatus device_status = 6;
+  optional Xmml unknown_7 = 7;
+  optional Xmkt unknown_8 = 8;
+  optional StatusMessage status_message = 9;
+  optional LastSeen last_seen = 10;
+  optional Xmrs unknown_11 = 11;
+}
+// Possible enums names: ['ProfileType', 'Gender', 'ClientPhotoStatus']
+// Possible enum fields: ['a', 'l', 'm']
+// Message used by: ['Entity', 'Xmpn']
+message EntityProperties {
+  optional ProfileType type = 1;
+  optional string display_name = 2;
+  optional string first_name = 3;
+  optional string photo_url = 4;
+  repeated string email = 5;
+  repeated string phone = 6;
+  optional string unknown_7 = 7;
+  optional string unknown_8 = 8;
+  optional string unknown_9 = 9;
+  optional bool in_users_domain = 10;
+  optional Gender gender = 11;
+  optional PhotoUrlStatus photo_url_status = 12;
+  repeated string unknown_13 = 13;
+  repeated Xnpq unknown_14 = 14;
+  optional string canonical_email = 15;
+  repeated Xmnc unknown_16 = 16;
+}
+// Possible enums names: ['ClientChatRestricted',
+// 'ClientBabelDomainState', 'ClientDomainDefaultOtrSetting']
+// Possible enum fields: ['g', 'i', 'j', 'k']
+// Message used by: ['Entity']
+message Xmmt {
+  optional bool unknown_1 = 1;
+  optional bool unknown_2 = 2;
+  optional bool unknown_3 = 3;
+  optional bool unknown_4 = 4;
+  optional string unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  optional uint32 unknown_7 = 7;
+  optional bytes unknown_8 = 8;
+  optional uint32 unknown_9 = 9;
+  optional uint32 unknown_10 = 10;
+  optional uint32 unknown_11 = 11;
+  optional bool unknown_12 = 12;
+}
+// Possible enums names: ['ClientStatus']
+// Possible enum fields: ['a']
+// Message used by: ['PresenceResult']
+message Xmqx {
+  optional uint32 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  repeated uint32 unknown_3 = 3;
+}
+// Possible enums names: ['Status']
+// Possible enum fields: ['a', 'b', 'd', 'k', 'l', 'm', 's', 'v', 'w',
+// 'x', 'y']
+// Message used by: ['Xmov']
+message Xnly {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  repeated uint32 unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+  optional Xnma unknown_5 = 5;
+  optional Xnma unknown_6 = 6;
+  optional Xnma unknown_7 = 7;
+  repeated string unknown_8 = 8;
+  optional bool unknown_9 = 9;
+  optional uint64 unknown_10 = 10;
+  optional uint32 unknown_11 = 11;
+  optional uint32 unknown_12 = 12;
+  optional uint32 unknown_13 = 13;
+  repeated uint64 unknown_14 = 14;
+  optional string unknown_15 = 15;
+  repeated Xnmb unknown_16 = 16;
+  optional bool unknown_17 = 17;
+  repeated uint32 unknown_18 = 18;
+  optional uint32 unknown_19 = 19;
+  optional Xnlz unknown_20 = 20;
+  optional string unknown_21 = 21;
+  optional uint32 unknown_22 = 22;
+  optional uint32 unknown_23 = 23;
+  optional uint32 unknown_24 = 24;
+  optional uint32 unknown_25 = 25;
+  repeated Xnmc unknown_26 = 26;
+}
+// Message used by: ['Xmov']
+message Xmow {
+  optional ConversationId unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional Xmto unknown_3 = 3;
+  optional Xmtc unknown_4 = 4;
+}
+// Possible enums names: ['SegmentTypeEnum']
+// Possible enum fields: ['b']
+// Message used by: ['ChatMessageSpec', 'MessageContent', 'Xpwv']
+message Segment {
+  optional SegmentType type = 1;
+  optional string text = 2;
+  optional Formatting formatting = 3;
+  optional LinkData link_data = 4;
+  optional Xpww unknown_5 = 5;
+  optional Xpws unknown_6 = 6;
+}
+// Message used by: ['LinkData', 'MessageContent', 'Xmqa', 'Xmtn']
+message Attachment {
+  optional EmbedItem embed_item = 1;
+  optional string unknown_3 = 3;
+}
+// Message used by: ['ExistingMedia']
+message Photo {
+  optional string photo_id = 1;
+  optional bool delete_albumless_source_photo = 2;
+  optional string user_id = 3;
+  optional bool is_custom_user_id = 4;
+}
+// Message used by: ['ExistingMedia']
+message Xmnl {
+  optional uint64 unknown_1 = 1;
+}
+// Message used by: ['ExistingMedia', 'Location', 'Xmnq', 'Xmpw', 'Xmre',
+// 'Xmtm']
+message Xmkz {
+  optional string unknown_1 = 1;
+}
+// Message used by: ['InviteeId']
+message Xmpj {
+  optional Xmpm unknown_1 = 1;
+  optional Xmpk unknown_2 = 2;
+  optional Xmpl unknown_3 = 3;
+}
+// Possible enum fields: ['F']
+// Message used by: ['Location']
+message Place {
+  optional string url = 1;
+  optional string unknown_2 = 2;
+  optional string name = 3;
+  optional string unknown_4 = 4;
+  optional string unknown_5 = 5;
+  optional Xppd unknown_6 = 6;
+  optional string unknown_7 = 7;
+  repeated EmbedItem unknown_8 = 8;
+  optional EmbedItem unknown_9 = 9;
+  repeated EmbedItem unknown_11 = 11;
+  optional string unknown_12 = 12;
+  optional EmbedItem address = 24;
+  optional EmbedItem geo = 25;
+  optional string unknown_26 = 26;
+  optional string unknown_27 = 27;
+  optional string unknown_28 = 28;
+  optional string unknown_29 = 29;
+  optional string unknown_75 = 75;
+  optional EmbedItem unknown_82 = 82;
+  optional string unknown_106 = 106;
+  optional EmbedItem representative_image = 185;
+  optional string unknown_227 = 227;
+  optional string unknown_228 = 228;
+  optional string unknown_254 = 254;
+  optional bool unknown_267 = 267;
+  optional string unknown_280 = 280;
+  optional string unknown_282 = 282;
+  optional string unknown_287 = 287;
+  optional uint32 unknown_288 = 288;
+}
+// Message used by: ['ChatMessageSpec']
+message Xmpw {
+  optional Xmpy unknown_1 = 1;
+  optional Xmpz unknown_2 = 2;
+  optional Xmpx unknown_3 = 3;
+  optional Xmkz unknown_4 = 4;
+}
+// Message used by: ['Xmtm']
+message Xmti {
+  optional string unknown_1 = 1;
+}
+// Possible enum fields: ['d']
+// Message used by: ['SuggestedContactGroup']
+message SuggestedContact {
+  optional Entity entity = 1;
+  optional InvitationStatus invitation_status = 2;
+  optional ConversationId unknown_3 = 3;
+}
+// Possible enum fields: ['c']
+// Message used by: ['ClientDeclineAllInvitesNotification', 'Xmpa']
+message Xmmc {
+  optional uint64 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Possible enums names: ['ClientExternalKeySpace']
+// Possible enum fields: ['b']
+// Message used by: ['Xmnp']
+message Xmnr {
+  optional uint32 unknown_1 = 1;
+  optional string unknown_2 = 2;
+}
+// Possible enum fields: ['a']
+// Message used by: ['Xmyn']
+message Xmyq {
+  optional uint32 unknown_1 = 1;
+  optional bool unknown_2 = 2;
+}
+// Message used by: ['Xmwe']
+message Xmwf {
+  optional string unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Possible enums names: ['ValidationResult']
+// Possible enum fields: ['c', 'f']
+// Message used by: ['PhoneNumber']
+message I18nData {
+  optional string national_number = 1;
+  optional string international_number = 2;
+  optional uint32 country_code = 3;
+  optional string region_code = 4;
+  optional bool is_valid = 5;
+  optional PhoneValidationResult validation_result = 6;
+}
+// Possible enum fields: ['d', 'f']
+// Message used by: ['PhoneData']
+message Phone {
+  optional PhoneNumber phone_number = 1;
+  optional bool google_voice = 2;
+  optional PhoneVerificationStatus verification_status = 3;
+  optional bool discoverable = 4;
+  optional PhoneDiscoverabilityStatus discoverability_status = 5;
+  optional bool primary = 6;
+}
+// Message used by: ['RichPresenceState']
+message Xmqj {
+  optional string unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['RichPresenceState']
+message Xmoz {
+  optional ClientIdentifier unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+}
+// Message used by: ['RichPresenceState']
+message StatusMessageState {
+  repeated MessageContent status_message = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Message used by: ['Xmnn']
+message Xmno {
+  optional uint64 unknown_1 = 1;
+  optional double unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional bool unknown_4 = 4;
+}
+// Possible enum fields: ['a']
+// Message used by: ['StateUpdate', 'Xmya']
+message StateUpdateHeader {
+  optional ActiveClientState active_client_state = 1;
+  optional bytes unknown_2 = 2;
+  optional string request_trace_id = 3; // TODO: changed from uint64 to string
+  optional NotificationSettings notification_settings = 4;
+  optional uint64 current_server_time = 5;
+  optional Xmkn unknown_6 = 6;
+  optional string unknown_7 = 7;
+  optional string unknown_8 = 8;
+}
+// Message used by: ['StateUpdate']
+message ConversationNotification {
+  optional Conversation conversation = 1;
+}
+// Message used by: ['StateUpdate']
+message EventNotification {
+  optional Event event = 1;
+}
+// Possible enum fields: ['d', 'e']
+// Message used by: ['StateUpdate']
+message SetFocusNotification {
+  optional ConversationId conversation_id = 1;
+  optional ParticipantId sender_id = 2;
+  optional uint64 timestamp = 3;
+  optional FocusType type = 4;
+  optional FocusDevice device = 5;
+}
+// Possible enum fields: ['d']
+// Message used by: ['StateUpdate']
+message SetTypingNotification {
+  optional ConversationId conversation_id = 1;
+  optional ParticipantId sender_id = 2;
+  optional uint64 timestamp = 3;
+  optional TypingType type = 4;
+}
+// Possible enum fields: ['b', 'c']
+// Message used by: ['StateUpdate']
+message SetConversationNotificationLevelNotification {
+  optional ConversationId conversation_id = 1;
+  optional NotificationLevel level = 2;
+  optional uint32 unknown_3 = 3;
+  optional uint64 timestamp = 4;
+}
+// Possible enum fields: ['b']
+// Message used by: ['StateUpdate']
+message ReplyToInviteNotification {
+  optional ConversationId conversation_id = 1;
+  optional ReplyToInviteType type = 2;
+}
+// Message used by: ['StateUpdate']
+message WatermarkNotification {
+  optional ParticipantId sender_id = 1;
+  optional ConversationId conversation_id = 2;
+  optional uint64 latest_read_timestamp = 3;
+}
+// Possible enum fields: ['b', 'c']
+// Message used by: ['StateUpdate']
+message ViewModificationNotification {
+  optional ConversationId unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Message used by: ['StateUpdate']
+message EasterEggNotification {
+  optional ParticipantId sender_id = 1;
+  optional ConversationId conversation_id = 2;
+  optional EasterEgg easter_egg = 3;
+}
+// Message used by: ['StateUpdate']
+message SelfPresenceNotification {
+  optional ClientPresenceState client_presence_state = 1;
+  optional Presence unknown_2 = 2;
+  optional DoNotDisturbSetting do_not_disturb_setting = 3;
+  optional DesktopOffSetting desktop_off_setting = 4;
+  optional DesktopOffState desktop_off_state = 5;
+  optional RichPresenceState rich_presence_state = 6;
+}
+// Message used by: ['StateUpdate']
+message DeleteConversationNotification {
+  optional ConversationId unknown_1 = 1;
+  optional DeleteAction unknown_2 = 2;
+}
+// Message used by: ['StateUpdate']
+message PresenceNotification {
+  repeated PresenceResult presence = 1;
+}
+// Message used by: ['StateUpdate']
+message BlockNotification {
+  repeated BlockStateChange block_state_change = 1;
+}
+// Message used by: ['StateUpdate']
+message Xmpc {
+  optional Xmpa unknown_1 = 1;
+}
+// Possible enum fields: ['d']
+// Message used by: ['StateUpdate']
+message SetNotificationSettingNotification {
+  repeated ConfigurationBit configuration_bit = 1;
+  optional DesktopSoundSetting desktop_sound_setting = 2;
+  optional bool unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+}
+// Message used by: ['StateUpdate']
+message RichPresenceEnabledStateNotification {
+  repeated RichPresenceEnabledState rich_presence_enabled_state = 1;
+}
+// Message used by: ['StateUpdate']
+message Xmlh {
+  repeated ParticipantId unknown_1 = 1;
+  repeated ParticipantId unknown_2 = 2;
+  repeated Xmnt unknown_3 = 3;
+  optional Xmnu unknown_4 = 4;
+}
+// Message used by: ['StateUpdate']
+message ClientDeclineAllInvitesNotification {
+  optional Xmmc unknown_1 = 1;
+}
+// Message used by: ['StateUpdate']
+message Xmln {
+  optional ConversationId unknown_1 = 1;
+  optional DeliveryMedium unknown_2 = 2;
+}
+// Possible enum fields: ['b']
+// Message used by: ['StateUpdate']
+message Xmnx {
+  optional ConversationId unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Message used by: ['StateUpdate']
+message Xmll {
+  optional ParticipantId unknown_1 = 1;
+  optional ConversationId unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+// Message used by: ['StateUpdate']
+message Xmsm {
+  optional ConversationId unknown_1 = 1;
+  optional Xmtw unknown_2 = 2;
+}
+// Message used by: ['StateUpdate']
+message Xmkv {
+  repeated Xmkw unknown_1 = 1;
+}
+// Possible enum fields: ['c']
+// Message used by: ['StateUpdate']
+message Xmpb {
+  optional ConversationId unknown_1 = 1;
+  optional ParticipantId unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Message used by: ['StateUpdate']
+message MarkEventObservedNotification {
+  repeated Xmql unknown_1 = 1;
+}
+// Possible enum fields: ['a']
+// Message used by: ['StateUpdate']
+message Xmos {
+  optional uint32 unknown_1 = 1;
+}
+// Message used by: ['Xmkw']
+message Xnbi {
+  optional PhoneNumber unknown_1 = 1;
+  optional bytes unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+}
+// Message used by: ['UserEventState']
+message Xmtp {
+  repeated Xmtn unknown_2 = 2;
+}
+// Message used by: ['Xmnf']
+message Xmpg {
+  optional PhoneNumber unknown_1 = 1;
+}
+// Message used by: ['UserConversationState']
+message DeliveryMediumOption {
+  optional DeliveryMedium delivery_medium = 1;
+  optional bool current_default = 2;
+  optional bool unknown_3 = 3;
+}
+// Message used by: ['UserConversationState']
+message Xmpo {
+  repeated Xmpn unknown_1 = 1;
+}
+// Possible enums names: ['ClientTranslationStatus',
+// 'ClientLanguageDetectionStatus']
+// Possible enum fields: ['a', 'c']
+// Message used by: ['UserConversationState', 'Xmsm']
+message Xmtw {
+  optional uint32 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+}
+// Possible enums names: ['Type']
+// Possible enum fields: ['b', 'f']
+// Message used by: ['Presence']
+message Xmmm {
+  optional uint32 unknown_1 = 1;
+  optional double unknown_2 = 2;
+  optional double unknown_3 = 3;
+  optional uint64 unknown_4 = 4;
+  optional uint32 unknown_5 = 5;
+  optional string unknown_6 = 6;
+}
+// Message used by: ['Presence']
+message Xmqh {
+  optional string unknown_1 = 1;
+}
+// Possible enums names: ['ClientCallType']
+// Possible enum fields: ['a']
+// Message used by: ['Presence']
+message Xmox {
+  optional uint32 unknown_1 = 1;
+}
+// Message used by: ['Presence']
+message DeviceStatus {
+  optional bool mobile = 1;
+  optional bool desktop = 2;
+  optional bool tablet = 3;
+}
+// Possible enums names: ['Type']
+// Possible enum fields: ['a', 'b']
+// Message used by: ['Presence']
+message Xmml {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Possible enums names: ['LocalTimePresence']
+// Possible enum fields: ['c']
+// Message used by: ['Presence']
+message Xmkt {
+  optional bool unknown_1 = 1;
+  optional bool unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  repeated uint32 unknown_4 = 4;
+}
+// Message used by: ['Presence']
+message StatusMessage {
+  repeated MessageContent status_message = 1;
+}
+// Message used by: ['Presence']
+message LastSeen {
+  optional uint64 last_seen_timestamp_usec = 1;
+  optional uint64 usec_since_last_seen = 2;
+}
+// Possible enums names: ['ClientResponsivenessType']
+// Possible enum fields: ['a']
+// Message used by: ['Presence']
+message Xmrs {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Message used by: ['EntityProperties']
+message Xnpq {
+  optional PhoneNumber unknown_1 = 1;
+  optional Xnpu unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_4 = 4;
+}
+// Possible enums names: ['ClientAffinityType']
+// Possible enum fields: ['b']
+// Message used by: ['EntityProperties']
+message Xmnc {
+  optional uint32 unknown_1 = 1;
+  optional double unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+// Possible enum fields: ['b']
+// Message used by: ['Xnly']
+message Xnma {
+  optional string unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+// Possible enum fields: ['b', 'c', 'd', 'e', 'f']
+// Message used by: ['Xnly']
+message Xnmb {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+  optional uint32 unknown_5 = 5;
+  optional string unknown_6 = 6;
+}
+// Message used by: ['Xnly']
+message Xnlz {
+  optional uint64 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+  optional uint64 unknown_3 = 3;
+}
+// Possible enum fields: ['b']
+// Message used by: ['Xnly']
+message Xnmc {
+  optional uint32 unknown_1 = 1;
+}
+// Message used by: ['Xmow']
+message Xmto {
+  optional string unknown_1 = 1;
+}
+// Possible enums names: ['SmsType']
+// Possible enum fields: ['a']
+// Message used by: ['Xmow']
+message Xmtc {
+  optional uint32 unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+}
+// Possible enums names: ['StyleEnum']
+// Possible enum fields: ['f']
+// Message used by: ['Segment']
+message Formatting {
+  optional bool bold = 1;
+  optional bool italic = 2;
+  optional bool strikethrough = 3;
+  optional bool underline = 4;
+  optional uint32 unknown_5 = 5;
+  optional bool unknown_6 = 6;
+}
+// Possible enums names: ['AttachmentRenderHint']
+// Possible enum fields: ['e']
+// Message used by: ['Segment']
+message LinkData {
+  optional string link_target = 1;
+  optional string unknown_2 = 2;
+  optional Attachment unknown_3 = 3;
+  optional string unknown_4 = 4;
+  optional uint32 unknown_5 = 5;
+}
+// Message used by: ['Segment']
+message Xpww {
+  optional uint64 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional string unknown_3 = 3;
+}
+// Message used by: ['Segment']
+message Xpws {
+  optional string unknown_1 = 1;
+}
+// Message used by: ['Attachment', 'Place', 'Xkvx', 'Xlvt', 'Xlwb',
+// 'Xppi', 'Xppl', 'Xppo', 'Xppp', 'Xppu', 'Xppw', 'Xpqe', 'Xpqp',
+// 'Xpqq', 'Xpqu', 'Xpqw', 'Xpra', 'Xprc', 'Xpre', 'Xprg']
+message EmbedItem {
+  repeated ItemType type = 1;
+  optional string id = 2;
+  optional string unknown_3 = 3;
+  optional Xpoy unknown_4 = 4;
+  optional Xppe unknown_5 = 5;
+  optional string unknown_6 = 6;
+  optional Xppb unknown_7 = 7;
+  optional string unknown_8 = 8;
+}
+// Message used by: ['Xmpj']
+message Xmpm {
+  optional PhoneNumber unknown_1 = 1;
+}
+// Message used by: ['Xmpj']
+message Xmpk {
+  optional string unknown_1 = 1;
+}
+// Message used by: ['Xmpj']
+message Xmpl {
+  optional string unknown_1 = 1;
+}
+// Possible enum fields: ['b', 'c', 'h']
+// Message used by: ['Place', 'Xppi', 'Xppo', 'Xppp', 'Xppw', 'Xpqq',
+// 'Xpqu', 'Xpqw', 'Xpra']
+message Xppd {
+  optional string unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional bool unknown_4 = 4;
+  optional bool unknown_5 = 5;
+  optional bool unknown_6 = 6;
+  optional string unknown_7 = 7;
+  optional uint32 unknown_8 = 8;
+  optional Xppc unknown_9 = 9;
+}
+// Message used by: ['Xmpw']
+message Xmpy {
+  optional string unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional bool unknown_3 = 3;
+  optional bool unknown_4 = 4;
+}
+// Message used by: ['Xmpw']
+message Xmpz {
+  optional bool unknown_1 = 1;
+}
+// Message used by: ['Xmpw']
+message Xmpx {
+  optional uint64 unknown_1 = 1;
+}
+// Message used by: ['StateUpdateHeader']
+message NotificationSettings {
+  optional DoNotDisturbSetting dnd_settings = 1;
+}
+// Possible enums names: ['ClientArchiveMode']
+// Possible enum fields: ['b']
+// Message used by: ['StateUpdateHeader']
+message Xmkn {
+  optional bool unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+}
+// Possible enum fields: ['c']
+// Message used by: ['BlockNotification']
+message BlockStateChange {
+  optional ParticipantId participant_id = 1;
+  optional BlockState new_block_state = 2;
+}
+// Message used by: ['Xmlh']
+message Xmnu {
+  optional bytes unknown_1 = 1;
+}
+// Possible enums names: ['ClientSuggestionType']
+// Possible enum fields: ['d']
+// Message used by: ['Xmtp']
+message Xmtn {
+  optional string unknown_1 = 1;
+  optional uint64 unknown_2 = 2;
+  optional uint32 unknown_3 = 3;
+  optional Attachment unknown_6 = 6;
+  optional Xmmy unknown_7 = 7;
+  optional string unknown_8 = 8;
+  optional string unknown_9 = 9;
+}
+// Message used by: ['Xmpo']
+message Xmpn {
+  optional ParticipantId unknown_1 = 1;
+  optional EntityProperties unknown_2 = 2;
+}
+// Message used by: ['Xnpq']
+message Xnpu {
+  optional string unknown_1 = 1;
+  optional string unknown_2 = 2;
+}
+// Message used by: ['EmbedItem']
+message Xpoy {
+  optional uint64 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  repeated Xppa unknown_3 = 3;
+  optional string unknown_4 = 4;
+}
+// Message used by: ['EmbedItem']
+message Xppe {
+}
+// Message used by: ['EmbedItem', 'Xpuz']
+message Xppb {
+  optional uint64 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_4 = 4;
+  repeated string unknown_5 = 5;
+  optional bytes unknown_8 = 8;
+}
+// Possible enums names: ['ImageUrlFormat']
+// Possible enum fields: ['a']
+// Message used by: ['Xlos', 'Xlut', 'Xppd']
+message Xppc {
+  optional uint32 unknown_1 = 1;
+  optional string unknown_2 = 2;
+}
+// Possible enums names: ['ClientGemHorizontalAlignment']
+// Possible enum fields: ['a', 'b', 'd']
+// Message used by: ['Xmtn']
+message Xmmy {
+  optional uint32 unknown_1 = 1;
+  optional uint32 unknown_2 = 2;
+  repeated string unknown_3 = 3;
+  optional uint32 unknown_4 = 4;
+}
+// Possible enums names: ['Type']
+// Possible enum fields: ['b']
+// Message used by: ['Xpoy']
+message Xppa {
+  optional uint32 unknown_1 = 1;
+  optional string unknown_2 = 2;
+  optional string unknown_3 = 3;
+  optional string unknown_4 = 4;
+}
